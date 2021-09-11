@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+}
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.heading-text{
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+  margin: 50px;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+}
+.jc-center{
+  justify-content: center;
+}
+.square {
+  min-width: 70px;
+  min-height: 70px;
+  font-size: 30px;
+  text-align: center;
+  color: #1CDBF5;
+  font-weight: bolder;
+  padding: 20px;
+}
+.b-bottom-right {
+  border-right: 5px solid #1CDBF5;
+  border-bottom: 5px solid #1CDBF5;
+}
+
+.b-bottom {
+  border-bottom: 5px solid #1CDBF5;
+}
+
+.b-right {
+  border-right: 5px solid #1CDBF5;
+}
+.clear-button {
+  width: max-content;
+  margin: 40px auto 10px auto;
+}
+.fc-aqua {
+  color: #1CDBF5;
+}
+
+.fc-white {
+  color: white;
+}
