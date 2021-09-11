@@ -7,6 +7,8 @@ const clearState=["","","","","","","","","",""]
 function App() {
   const [gameState, updateGameState] = useState(clearState)
   const [isXChance, updateIsXChance] = useState(false)
+  const [message,setMessage] = useState('')
+  const [winner,setWinner] = useState(null);
 
   const onUserClicked = (index) => {
       let strings = Array.from(gameState);
@@ -21,10 +23,16 @@ function App() {
       updateGameState(clearState)
   }
   useEffect(() => {
-      let winner = checkWinner();
+      let win =checkWinner();
+      setWinner(win)
+      console.log(winner);
       if (winner) {
+        setMessage(`Winner is ${winner}`)
           clearGame();
-          alert(`Ta da ! ${winner} won the Game !`)
+          
+      }
+      else{
+        setMessage(`Next Player is ${isXChance ? 'X':'0'}`)
       }
   }, [gameState])
 
@@ -52,6 +60,7 @@ function App() {
   return (
     <div className="App-header">
      <h1 className="heading-text">Tic Tac Toe</h1>
+     <h2>{message}</h2>
      <div className="row jc-center">
        <SquareComponent className="b-bottom-right" state={gameState[0]} onClick={()=>onUserClicked(0)}/>
        <SquareComponent className="b-bottom-right" state={gameState[1]} onClick={()=>onUserClicked(1)}/>
